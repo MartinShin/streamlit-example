@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 """
-# 신호철은 잘생겼다!!!!!
+# 저는 streamlit을 모릅니다.
 
 """
 st.write("Hello World")
