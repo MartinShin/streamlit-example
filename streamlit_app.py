@@ -3,8 +3,7 @@
 import altair as alt
 import pandas as pd
 import streamlit as st
-from bs4 import BeautifulSoup 
-
+from bs4 import BeautifulSoup as bs
 
 """
 # 저는 streamlit을 모릅니다.
