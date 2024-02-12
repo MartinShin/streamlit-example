@@ -15,3 +15,24 @@ st.write("Hello World")
 
 
 
+# step3. 입력받은 query가 포함된 url 주소(네이버 뉴스 검색 결과 페이지) 저장
+
+url = 'https://www.npr.org'
+
+
+# step4. requests 패키지를 이용해 'url'의 html 문서 가져오기
+
+response = requests.get(url)
+
+html_text = response.text
+
+
+# step5. beautifulsoup 패키지로 파싱 후, 'soup' 변수에 저장
+
+soup = bs(response.text, 'html.parser')
+
+# 모든 'a' 태그 찾기
+links = soup.find_all('a')
+
+
+
