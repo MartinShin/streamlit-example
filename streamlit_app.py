@@ -34,5 +34,15 @@ soup = bs(response.text, 'html.parser')
 # 모든 'a' 태그 찾기
 links = soup.find_all('a')
 
+# 각 링크의 href 속성 출력
+article_urls = []
+x=0
+for link in links:
+    if link.has_attr('href'):
+        if 'npr.org/2024' in link['href']:
+            st.write("Hello World")
+            print(x,link['href'])
+            article_urls.append(link['href'])
+            x=x+1
 
 
