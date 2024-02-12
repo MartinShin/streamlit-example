@@ -2,3 +2,6 @@ altair
 pandas
 streamlit
 beautifulsoup4
+requests
+openai
+typing
