@@ -1,5 +1,4 @@
 altair
 pandas
 streamlit
-beautifulsoup4
 beautifulsoup4==4.9.3
