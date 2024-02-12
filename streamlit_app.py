@@ -40,7 +40,7 @@ x=0
 for link in links:
     if link.has_attr('href'):
         if 'npr.org/2024' in link['href']:
-            st.write(x,link['href'])
+            #st.write(x,link['href'])
             article_urls.append(link['href'])
             x=x+1
 
