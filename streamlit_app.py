@@ -2,7 +2,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
-import BeautifulSoup as bs
+
 """
 # 신호철은 잘생겼다!!!!!
 
