@@ -52,7 +52,7 @@ response = requests.get(article)
 html = response.content
 
 # BeautifulSoup 객체를 생성하여 HTML을 파싱합니다.
-soup = BeautifulSoup(html, 'html.parser')
+soup = bs(html, 'html.parser')
 
 # 기사 본문을 추출합니다. 실제 클래스 이름은 페이지에 따라 다를 수 있습니다.
 #article_body = soup.find('p')
