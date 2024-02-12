@@ -41,8 +41,27 @@ for link in links:
     if link.has_attr('href'):
         if 'npr.org/2024' in link['href']:
             st.write(x,link['href'])
-            print(x,link['href'])
             article_urls.append(link['href'])
             x=x+1
 
 
+# requests를 사용하여 웹 페이지의 HTML을 가져옵니다.
+article=article_urls[1]
+response = requests.get(article)
+
+html = response.content
+
+# BeautifulSoup 객체를 생성하여 HTML을 파싱합니다.
+soup = BeautifulSoup(html, 'html.parser')
+
+# 기사 본문을 추출합니다. 실제 클래스 이름은 페이지에 따라 다를 수 있습니다.
+#article_body = soup.find('p')
+#paragraphs = article_body.find_all('p')
+paragraphs = soup.find_all('p')
+
+# 기사 본문을 텍스트로 합칩니다.
+
+article_content = '\n'.join(paragraph.text for paragraph in paragraphs)
+article_content ="아래 기사는 미국 언론 NPR이 보도한 것이다.\n"+article_content 
+#print(article_content)
+st.write(article_content)
